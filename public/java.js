@@ -1,5 +1,3 @@
-console.log('This is just to show')
-
 const form = document.querySelector('form')
 const search = document.querySelector('input')
 const message1 = document.querySelector('#msg1')
