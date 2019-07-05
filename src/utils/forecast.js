@@ -6,9 +6,9 @@ const forecast = (lat,long, callback) => {
 
     request({url ,json :true} ,(error,response) => {
         if(error){
-            callback('Unable to use the weather api')
+            callback('Unable to use the weather api',undefined)
         } else if(response.body.error){
-            callback('Unable to find the location')
+            callback('Unable to find the location',undefined)
         } else {
             callback(undefined, response.body.daily.data[0].summary + 'It is currently ' + response.body.currently.temperature + 'C with a ' +response.body.currently.precipProbability +' % chance of rain. The maximum temperature during the day will be ' + response.body.daily.data[0].temperatureMax + 'C .') 
             }
